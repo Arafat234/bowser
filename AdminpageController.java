@@ -22,34 +22,14 @@ import javafx.stage.Stage;
  *
  * @author mohammedarafatamin
  */
-public class TutorPageController implements Initializable {
+public class AdminpageController implements Initializable {
 
     /**
      * Initializes the controller class.
-     * @param event
-     * @throws java.io.IOException
      */
     
-    @FXML
-    public void update(ActionEvent event) throws IOException{
-        Parent h = FXMLLoader.load(getClass().getResource("UpdateDetails.fxml"));
-        Scene hpage = new Scene(h);
-        Stage hstage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        hstage.setScene(hpage);
-        hstage.show();
-    }
-    
     
     @FXML
-    public void viewsession(ActionEvent event) throws IOException{
-        Parent h = FXMLLoader.load(getClass().getResource("viewsession.fxml"));
-        Scene hpage = new Scene(h);
-        Stage hstage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        hstage.setScene(hpage);
-        hstage.show();
-    }
-    
-     @FXML
     public void switchToHome(ActionEvent event) throws IOException{
         Parent home = FXMLLoader.load(getClass().getResource("homeQMSkills.fxml"));
         Scene homepage = new Scene(home);
@@ -58,15 +38,19 @@ public class TutorPageController implements Initializable {
         homestage.show();
     }
     
-    
     @FXML
-    public void viewDetails(ActionEvent event) throws IOException{
-        Parent home = FXMLLoader.load(getClass().getResource("viewDetails.fxml"));
+    public void switchtoUserStatus(ActionEvent event) throws IOException{
+        Parent home = FXMLLoader.load(getClass().getResource("changeStatus.fxml"));
         Scene homepage = new Scene(home);
         Stage homestage = (Stage)((Node) event.getSource()).getScene().getWindow();
         homestage.setScene(homepage);
         homestage.show();
     }
+    
+    
+    
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
